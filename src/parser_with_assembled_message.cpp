@@ -7,7 +7,7 @@ mavlink_message_t create_message(const uint8_t *data, size_t size) {
     mavlink_obstacle_distance_t obstacle_distance;
 
     size_t copy_len = std::min(sizeof(obstacle_distance), size);
-    std::memcpy(reinterpret_cast<void *>(&obstacle_distance), data, copy_len);
+    std::memcpy(reinterpret_cast<void *>(&obstacle_distance.time_usec), data, copy_len);
 
     const uint8_t system_id = 0;
     const uint8_t component_id = 0;

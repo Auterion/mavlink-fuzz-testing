@@ -14,6 +14,10 @@ add_executable(parser_brute_force
     parser_brute_force.cpp
 )
 
-add_executable(parser_with_message
-    parser_with_message.cpp
+add_executable(parser_with_random_message
+    parser_with_random_message.cpp
+)
+
+add_executable(parser_with_assembled_message
+    parser_with_assembled_message.cpp
 )
