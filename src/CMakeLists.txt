@@ -9,7 +9,7 @@ set(CMAKE_CXX_FLAGS -fsanitize=fuzzer)
 
 include_directories(../generated/include/mavlink/v2.0)
 
-add_executable(parser_fuzzing
-    target.cpp
+add_executable(parser_brute_force
+    parser_brute_force.cpp
 )
 
