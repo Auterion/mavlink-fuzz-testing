@@ -1,4 +1,6 @@
+#define MAVLINK_CHECK_MESSAGE_LENGTH 1
 #include <common/mavlink.h>
+
 #include <algorithm>
 #include <cstring>
 
