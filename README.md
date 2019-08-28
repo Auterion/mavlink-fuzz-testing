@@ -1,8 +1,20 @@
 # MAVLink Fuzz Testing
 
+## Description
+
+This is an effort to test the MAVLink parser written in C using fuzz testing.
+The testing is based on the [LLVM LibFuzzer](https://llvm.org/docs/LibFuzzer.html).
+
+## Results
+
+So far the following bugs have been identified:
+
+- [ArduPilot/pymavlink/pull/343](https://github.com/ArduPilot/pymavlink/pull/343)
+- [ArduPilot/pymavlink/pull/344](https://github.com/ArduPilot/pymavlink/pull/344) (already known)
+
 ## Instructions
 
-1. Make sure clang is installed.
+1. Make sure clang and cmake are installed.
 
 2. Git submodules:
 ```
