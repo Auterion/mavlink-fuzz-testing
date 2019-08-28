@@ -21,9 +21,9 @@ So far the following bugs have been identified:
 git submodule update --init --recursive
 ```
 
-3. Generate the C headers:
+3. Generate the C headers using pymavlink scripts from submodule:
 ```
-python3 -m mavlink.pymavlink.tools.mavgen --lang=C --wire-protocol=2.0 --output=generated/include/mavlink/v2.0 mavlink/message_definitions/v1.0/common.xml
+(cd mavlink/pymavlink/ && tools/mavgen.py --lang=C --wire-protocol=2.0 --output=../../generated/include/mavlink/v2.0 ../message_definitions/v1.0/common.xml)
 ```
 
 4. Run one of the fuzzer tests:
