@@ -41,3 +41,13 @@ cmake -Bbuild src && cmake --build build && build/parser_with_random_message COR
 ```
 
 5. The fuzzer will run until it detects crash. To stop it just press Ctrl+C.
+
+
+**Note**:
+
+Currently [ArduPilot/pymavlink/pull/343](https://github.com/ArduPilot/pymavlink/pull/343) is not yet merged, so the fuzzer immediately finds it. To test with the fix, use a temp branch as described below:
+
+```
+(cd mavlink/pymavlink && git remote add julianoes https://github.com/julianoes/pymavlink.git && git fetch julianoes && git checkout merge-fuzz-fixes)
+```
+Then do above steps 3. and 4. again.
