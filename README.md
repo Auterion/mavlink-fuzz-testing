@@ -17,15 +17,15 @@ python3 -m mavlink.pymavlink.tools.mavgen --lang=C --wire-protocol=2.0 --output=
 4. Run one of the fuzzer tests:
 
 ```
-cmake -Bbuild src && cmake --build build && build/parser_brute_force
+cmake -Bbuild src && cmake --build build && build/parser_brute_force CORPUS_DIR/
 ```
 
 ```
-cmake -Bbuild src && cmake --build build && build/parser_with_assembled_message
+cmake -Bbuild src && cmake --build build && build/parser_with_assembled_message CORPUS_DIR/
 ```
 
 ```
-cmake -Bbuild src && cmake --build build && build/parser_with_random_message
+cmake -Bbuild src && cmake --build build && build/parser_with_random_message CORPUS_DIR/
 ```
 
 5. The fuzzer will run until it detects crash. To stop it just press Ctrl+C.
